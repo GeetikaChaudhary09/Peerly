@@ -168,297 +168,156 @@ It is designed to:
 
 
 
+
 ## Technology Stack
-
-
 
 ### Frontend
 
-
-
 | Technology | Purpose |
-
 |---|---|
-
 | React 19 | Component-based user interface |
-
 | Vite | Development server and production build |
-
 | Tailwind CSS v4 | Responsive UI styling |
-
 | Framer Motion | UI animations and transitions |
-
 | React Router DOM | Client-side navigation and routing |
-
 | Lucide React | Interface icons |
-
 | Socket.IO Client | Real-time communication |
-
-
 
 ### Backend
 
-
-
 | Technology | Purpose |
-
 |---|---|
-
 | Node.js | Server-side JavaScript runtime |
-
 | Express.js | REST API and backend routing |
-
 | MongoDB | NoSQL database |
-
 | Mongoose | Database models and operations |
-
 | JWT | Authentication and authorization |
-
 | bcryptjs | Secure password hashing |
-
 | Multer | File upload handling |
-
 | Socket.IO | Real-time messaging and notifications |
-
-
 
 ### Development Tools
 
 - Git and GitHub
-
 - npm
-
 - Visual Studio Code
-
 - MongoDB Atlas
 
-
-
 ---
-
-
 
 ## System Architecture
 
-
-
 Peerly follows a client-server architecture.
 
-
-
 - **Frontend:** React-based application that provides the user interface and interacts with backend APIs.
-
 - **Backend:** Node.js and Express.js handle authentication, requests, messages, notifications, and transactions.
-
 - **Database:** MongoDB stores user accounts, requests, messages, notifications, and transaction records.
-
 - **Real-Time Layer:** Socket.IO supports live communication and notification events.
-
 - **File Handling:** Multer manages uploaded documents and images.
 
-
-
 ---
-
-
 
 ## Project Structure
 
-
-
 ```text
-
 Peerly/
-
-â”‚
-
-â”œâ”€â”€ client/
-
-â”‚   â”œâ”€â”€ public/
-
-â”‚   â””â”€â”€ src/
-
-â”‚       â”œâ”€â”€ assets/
-
-â”‚       â”œâ”€â”€ components/
-
-â”‚       â”œâ”€â”€ pages/
-
-â”‚       â”œâ”€â”€ App.jsx
-
-â”‚       â”œâ”€â”€ App.css
-
-â”‚       â”œâ”€â”€ index.css
-
-â”‚       â””â”€â”€ main.jsx
-
-â”‚
-
-â”œâ”€â”€ server/
-
-â”‚   â”œâ”€â”€ config/
-
-â”‚   â”œâ”€â”€ controllers/
-
-â”‚   â”œâ”€â”€ middleware/
-
-â”‚   â”œâ”€â”€ models/
-
-â”‚   â”œâ”€â”€ routes/
-
-â”‚   â”œâ”€â”€ utils/
-
-â”‚   â”œâ”€â”€ uploads/
-
-â”‚   â”œâ”€â”€ server.js
-
-â”‚   â”œâ”€â”€ socket.js
-
-â”‚   â””â”€â”€ .env.example
-
-â”‚
-
-â”œâ”€â”€ .gitignore
-
-â””â”€â”€ README.md
-
+│
+├── client/
+│   ├── public/
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       ├── pages/
+│       ├── App.jsx
+│       ├── App.css
+│       ├── index.css
+│       └── main.jsx
+│
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── uploads/
+│   ├── server.js
+│   ├── socket.js
+│   └── .env.example
+│
+├── .gitignore
+└── README.md
 ```
 
-
-
 ---
-
-
 
 ## Getting Started
 
-
-
 ### Prerequisites
 
-
-
 - Node.js and npm
-
 - MongoDB Atlas account or local MongoDB instance
-
 - Git
-
-
 
 ### 1. Clone the Repository
 
-
-
 ```bash
-
-git clone YOUR_GITHUB_REPOSITORY_URL
-
+git clone https://github.com/GeetikaChaudhary09/Peerly.git
 cd Peerly
-
 ```
-
-
 
 ### 2. Backend Setup
 
-
-
 ```bash
-
 cd server
-
 npm install
-
 ```
-
-
 
 Create a `.env` file inside the `server` directory using `.env.example` as a reference.
 
-
-
 Configure the following variables:
 
-
-
 ```env
-
 PORT=5000
-
 MONGO_URI=your_mongodb_connection_string
-
 JWT_SECRET=your_secret_key
-
 ```
-
-
 
 Start the backend development server:
 
-
-
 ```bash
-
 npm run dev
-
 ```
-
-
 
 ### 3. Frontend Setup
 
-
-
 Open another terminal:
 
-
-
 ```bash
-
 cd client
-
 npm install
-
 npm run dev
-
 ```
-
-
 
 Open the local development URL provided by Vite, usually:
 
-
-
 ```text
-
 http://localhost:5173
-
 ```
-
-
 
 ---
 
-
-
 ## Environment Variables
 
-
-
 | Variable | Description |
-
 |---|---|
-
 | PORT | Port on which the backend server runs |
-
 | MONGO_URI | MongoDB connection string |
-
 | JWT_SECRET | Secret key used for JWT authentication |
 
-
-
 **Security Note:** Never upload your actual `.env` file, database credentials, or secret keys to GitHub.
+
+
 
 
 
